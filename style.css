@@ -7,6 +7,10 @@ p {
     margin: 0;
 }
 
+footer {
+    margin-left: 40px;
+}
+
 .top, .bottom {
     display: flex;
 }
@@ -36,24 +40,25 @@ p {
     width: 100%;
     background-color: white;
 }
-    nav {
+    .nav_home {
         text-transform: uppercase;
         text-align: center;
         margin-top: 30px;
     }
-        nav a {
+        .nav_home a {
+            font-size: 14px;
             color: black;
             text-decoration: none;
             margin: 0 20px;
             padding: 5px 0;
             padding-bottom: 2px;
         }
-            nav a:hover {
-                border-bottom: 1px solid black;
-                border-top: 1px solid black;
+            .nav_home a:hover {
+                box-shadow: 0 1px 0 black, 0 -1px 0 black;
             }
     .copyright {
-        color: #ccc;
+        font-size: 11px;
+        color:rgb(150, 150, 150);
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 30px;
@@ -61,11 +66,15 @@ p {
     .copyright a {
         color: inherit;
         text-decoration: none;
-        border-bottom: 1px solid #ccc;
+        box-shadow: 0 1px 0 rgb(150, 150, 150);
     }
+        .copyright a:hover {
+            color: black;
+            box-shadow: 0 1px 0 black;
+        }
 
 @media only screen and (max-width: 1024px) {
-    nav a {
+    .nav_home a {
         margin: 0 10px;
     }
 }
@@ -77,19 +86,73 @@ p {
     .bottom {
         height: 50vh;
     }
-    nav {
+    .nav_home {
         width: 100%;
         margin-top: 20px;
     }
     .copyright {
+        width: 90%;
         margin-bottom: 20px;
-        font-size: 12px;
     }
-    nav a {
+    .nav_home a {
         display: block;
         line-height: 36px;
     }
-        nav a:hover {
+        .nav_home a:hover {
             border: none;
         }
 } 
+
+
+.nav_main {
+    display: flex;
+    align-items: flex-end;
+    margin: 90px 35px;
+}
+    .nav_main a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+        padding: 5px 0;
+        padding-bottom: 2px;
+    }
+        .nav_main a:first-child {
+            margin-right: 80px;
+        }
+        .nav_main a:hover {
+            box-shadow: 0 1px 0 white, 0 -1px 0 white;
+            color: white;
+        }
+        .nav_main a:first-child:hover {
+            box-shadow: none;
+        }
+
+.main_service {
+    width: 715px;
+    margin-left: 80px;
+    color: white;
+}
+    .main_service h2 {
+        font-size: 25px;
+        font-style: italic;
+        padding-left: 26px;
+        background: url('assets/plus.png') no-repeat left center;
+        cursor: pointer;
+    }
+    .main_service p {
+        text-transform: uppercase;
+        line-height: 24px;
+        font-size: 11px;
+        margin-bottom: 20px;
+    }
+    .serv_body {
+        display: none;
+    }
+
+.main_copyright {
+    text-align: left;
+}
+    .main_copyright a:hover {
+        color: white;
+        box-shadow: 0 1px 0 white;
+    }
