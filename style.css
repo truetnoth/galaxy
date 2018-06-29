@@ -76,6 +76,7 @@ p {
     }
     .copyright {
         margin-bottom: 20px;
+        font-size: 12px;
     }
     nav a {
         line-height: 24px;
