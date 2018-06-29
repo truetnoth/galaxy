@@ -68,17 +68,21 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+    .top {
+        height: 50vh;
+    }
+    .bottom {
+        height: 50vh;
+    }
     nav {
-        width: 50%;
-        margin-top: 20px;
+        width: 100%;
     }
     .copyright {
         margin-bottom: 20px;
-        font-size: 12px;
     }
     nav a {
         display: block;
-        line-height: 24px;
+        line-height: 36px;
     }
         nav a:hover {
             border: none;
