@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    padding: 0;
     font-family: serif;
 }
 p {
@@ -9,6 +8,8 @@ p {
 
 footer {
     margin-left: 40px;
+    align-items: flex-end;
+    padding-top: 80px; 
 }
 
 .top, .bottom {
@@ -52,6 +53,7 @@ footer {
             margin: 0 20px;
             padding: 5px 0;
             padding-bottom: 2px;
+            transition: box-shadow 0.7s ease;
         }
             .nav_home a:hover {
                 box-shadow: 0 1px 0 black, 0 -1px 0 black;
@@ -73,48 +75,22 @@ footer {
             box-shadow: 0 1px 0 black;
         }
 
-@media only screen and (max-width: 1024px) {
-    .nav_home a {
-        margin: 0 10px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .top {
-        height: 50vh;
-    }
-    .bottom {
-        height: 50vh;
-    }
-    .nav_home {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .copyright {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-    .nav_home a {
-        display: block;
-        line-height: 36px;
-    }
-        .nav_home a:hover {
-            border: none;
-        }
-} 
-
-
 .nav_main {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     margin: 90px 35px;
 }
+    .nav_main_logo {
+        width: 157px;
+    }
     .nav_main a {
         margin: 0 20px;
         text-decoration: none;
         color: white;
         padding: 5px 0;
         padding-bottom: 2px;
+        transition: box-shadow 0.7s ease;
     }
         .nav_main a:first-child {
             margin-right: 80px;
@@ -126,6 +102,8 @@ footer {
         .nav_main a:first-child:hover {
             box-shadow: none;
         }
+
+
 
 .main_service {
     width: 715px;
@@ -156,3 +134,63 @@ footer {
         color: white;
         box-shadow: 0 1px 0 white;
     }
+
+
+    @media only screen and (max-width: 1024px) {
+        .nav_home a {
+            margin: 0 10px;
+        }
+        .main_service {
+            width: 80%;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .top {
+            height: 50vh;
+        }
+        .bottom {
+            height: 50vh;
+        }
+        .nav_home {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .copyright {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        .nav_home a {
+            display: block;
+            line-height: 36px;
+        }
+            .nav_home a:hover {
+                border: none;
+            }
+    
+        .main_service {
+            width: 100%;
+            margin: 0;
+            padding-left: 20px;
+        }  
+            .main_service p {
+                width: 80%;
+            }
+    
+        .nav_main a:first-child {
+            width: 100%;
+            text-align: center;
+            margin-right: 0;
+        }
+        .nav_main a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+            .nav_main_logo {
+                display: block;
+                width: 100%;
+            }
+    } 
