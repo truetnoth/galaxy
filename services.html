@@ -8,18 +8,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
         body {
+            height: 100vh;
             background: url(assets/bg.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
     <nav class="nav_main">
-        <a href="test.html"><img src="assets/Logo.png" alt="#" width="157"></a>
-        <a href="test.html">Home</a>
+        <a href="index.html"><img src="assets/Logo.png" alt="#" class="nav_main_logo"></a>
+        <a href="index.html">Home</a>
         <a href="#">Projects</a>
         <a href="services.html">Services</a>
         <a href="#">Partnerships</a>
@@ -59,11 +63,11 @@
 		$(document).ready(function(){
 			$('.serv_title').click(function(){
 				if(!$(this).hasClass('active')){	//если "кликнутый" пункт неактивный:
-					$('.serv_title').removeClass('active').next('.serv_body').slideUp(600); //делаем неактивными все пункты и скрываем все блоки
-					$(this).addClass('active');	//активируем "кликнутый" пункт
+					$('.serv_title').removeClass('active').css('background-image', 'url(assets/plus.png').next('.serv_body').slideUp(600); //делаем неактивными все пункты и скрываем все блоки
+					$(this).addClass('active').css('background-image', 'url(assets/minus.png)');	//активируем "кликнутый" пункт
 					$(this).next('.serv_body').slideDown(800);	//раскрываем следующий за ним блок с описанием
 				} else {	//иначе:
-					$(this).removeClass('active').next('.serv_body').slideUp();	//скрываем данный пункт
+					$(this).removeClass('active').css('background-image', 'url(assets/plus.png').next('.serv_body').slideUp();	//скрываем данный пункт
 				}
 			});
 		});
