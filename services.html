@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfredo Borges</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            background: url(assets/bg.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav_main">
+        <a href="test.html"><img src="assets/Logo.png" alt="#" width="157"></a>
+        <a href="test.html">Home</a>
+        <a href="#">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="#">Partnerships</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="main_service">
+        <h2 class="serv_title">due diligence</h2>
+        <div class="serv_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, sit vero, pariatur accusantium mollitia aperiam consectetur illo, nam eveniet autem beatae debitis consequatur quasi est neque perferendis sapiente alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi? Incidunt dolore velit debitis. Officiis, ducimus totam ea quas vel officia velit veniam unde dolore? Iure voluptatum error molestias sunt!</p>
+        </div>
+        <h2 class="serv_title">acquisition</h2>
+        <div class="serv_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, sit vero, pariatur accusantium mollitia aperiam consectetur illo, nam eveniet autem beatae debitis consequatur quasi est neque perferendis sapiente alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi? Incidunt dolore velit debitis. Officiis, ducimus totam ea quas vel officia velit veniam unde dolore? Iure voluptatum error molestias sunt!</p>
+        </div>
+        <h2 class="serv_title">design / develop</h2>
+        <div class="serv_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, sit vero, pariatur accusantium mollitia aperiam consectetur illo, nam eveniet autem beatae debitis consequatur quasi est neque perferendis sapiente alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi? Incidunt dolore velit debitis. Officiis, ducimus totam ea quas vel officia velit veniam unde dolore? Iure voluptatum error molestias sunt!</p>
+        </div>
+        <h2 class="serv_title">construction managment</h2>
+        <div class="serv_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, sit vero, pariatur accusantium mollitia aperiam consectetur illo, nam eveniet autem beatae debitis consequatur quasi est neque perferendis sapiente alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi? Incidunt dolore velit debitis. Officiis, ducimus totam ea quas vel officia velit veniam unde dolore? Iure voluptatum error molestias sunt!</p>
+        </div>
+        <h2 class="serv_title">asset managment</h2>
+        <div class="serv_body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, sit vero, pariatur accusantium mollitia aperiam consectetur illo, nam eveniet autem beatae debitis consequatur quasi est neque perferendis sapiente alias?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi? Incidunt dolore velit debitis. Officiis, ducimus totam ea quas vel officia velit veniam unde dolore? Iure voluptatum error molestias sunt!</p>
+        </div>
+    </div>
+    <footer>
+        <p class="copyright main_copyright">&#169 2012 alfredo borges, all rights reserved. <a href="#">privacy policy</a></p> 
+    </footer>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$('.serv_title').click(function(){
+				if(!$(this).hasClass('active')){	//если "кликнутый" пункт неактивный:
+					$('.serv_title').removeClass('active').next('.serv_body').slideUp(600); //делаем неактивными все пункты и скрываем все блоки
+					$(this).addClass('active');	//активируем "кликнутый" пункт
+					$(this).next('.serv_body').slideDown(800);	//раскрываем следующий за ним блок с описанием
+				} else {	//иначе:
+					$(this).removeClass('active').next('.serv_body').slideUp();	//скрываем данный пункт
+				}
+			});
+		});
+	</script>
+</body>
+</html>
